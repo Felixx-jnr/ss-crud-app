@@ -5,8 +5,29 @@ export const waitlistSlice = createSlice({
   name: "waitlist",
   initialState: { value: Waitlist },
   reducers: {
-    addToWaitlist: (state, action) => {},
+    //add to waitlist
+    addToWaitlist: (state, action) => {
+      state.value.push(action.payload);
+    },
+
+    //delete a waitlist
+    deleteFromWaitlist: (state, action) => {
+      state.value = state.value.filter(
+        (waitlist) => waitlist.id !== action.payload.id
+      );
+    },
+
+    //update to waitlist
+    updateMailOnWaitlist: (state, action) => {
+      state.value.map((waitlist) => {
+        if (waitlist.id === action.payload.id) {
+          waitlist.mail = action.payload.mail;
+        }
+      });
+    },
   },
 });
 
+export const { addToWaitlist, deleteFromWaitlist, updateMailOnWaitlist } =
+  waitlistSlice.actions;
 export default waitlistSlice.reducer;
