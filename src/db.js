@@ -1,4 +1,4 @@
-export const Users = [
+export const Waitlist = [
   {
     id: 1,
     name: "Felix Udoh",
