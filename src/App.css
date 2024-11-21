@@ -20,6 +20,12 @@ body {
   font-weight: bold;
   margin-bottom: 30px;
   color: #f9a826;
+}
+
+input {
+  padding: 12px;
+  max-width: 400px;
+  width: 100%;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 25px;
@@ -113,6 +119,7 @@ img:hover {
   opacity: 0.8;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .waitlist-container {
     padding: 15px;
