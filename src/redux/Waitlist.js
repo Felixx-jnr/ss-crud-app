@@ -7,7 +7,7 @@ export const waitlistSlice = createSlice({
   reducers: {
     //add to waitlist
     addToWaitlist: (state, action) => {
-      state.value.push(action.payload);
+      state.value.unshift(action.payload);
     },
 
     //delete a waitlist
