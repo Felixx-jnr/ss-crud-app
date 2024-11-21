@@ -1,45 +1,53 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-  background: rgb(84, 32, 63);
+  background: #1a1a2e;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  width: 90%;
-  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
 }
 .App {
   text-align: center;
-  color: rgb(4, 4, 4);
 }
 
 .header {
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #f9a826;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  color: #333;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-input {
-  padding: 10px;
-  max-width: 300px;
-  width: 100%;
-  background: rgb(200, 92, 200);
-  border: none;
-  border-radius: 40px;
-  outline: 0;
-  color: rgb(127, 9, 127);
-  font-size: 20px;
+input:focus {
+  border-color: #f9a826;
 }
 
 button {
-  padding: 10px 20px;
-  background: rgb(186, 130, 186);
-  outline: 0;
-  color: rgb(50, 45, 50);
-  font-size: 20px;
-  border: 1px solid rgb(149, 104, 149);
-  border-radius: 30px;
+  padding: 12px 25px;
+  background: #f9a826;
+  outline: none;
+  color: #1a1a2e;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background: rgb(122, 74, 122);
+  background: #e08d14;
 }
 
 .add {
@@ -47,55 +55,73 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 50px;
 }
 
-.add input {
-  font-size: 18px;
-  max-width: 400px;
-  width: 100%;
-}
-
 .waitlist-container {
-  background: rgb(184, 128, 184);
-  padding: 10px;
-  width: 100%;
-  max-width: 700px;
+  background: #283149;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
   margin: 0 auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .waitlist {
-  background: rgb(222, 141, 199);
+  background: #404b69;
   padding: 20px;
-  margin: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.waitlist:hover {
+  transform: scale(1.03);
 }
 
 .waitlist-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
 }
 
 h2 {
   margin: 0;
-  padding: 0;
+  font-size: 1.5rem;
 }
+
 p {
-  margin: 10px 0;
-  padding: 0;
-  font-size: 20px;
+  margin: 5px 0 0;
+  font-size: 1rem;
 }
 
 .update {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 15px;
+  margin-top: 15px;
   justify-content: space-between;
 }
 
 img {
-  width: 20px;
-  display: inline;
+  width: 25px;
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .waitlist-container {
+    padding: 15px;
+  }
+  .waitlist {
+    padding: 15px;
+  }
+  .add input,
+  .add button {
+    max-width: 90%;
+  }
 }
